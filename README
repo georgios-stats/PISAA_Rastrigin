@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 DESCRIPTION :
 -------------
-=======
-TO BE RELEASED ON 2015-11-25
 
 This software performs stochastic optimisation on deterministic functions. 
->>>>>>> a5e54d3fe266647f7c2a933a5558084fe8cfd1b7
 
 A C code implementation of PISAA for minimising any R-valued cost function 
 of a R^n-valued variable. 
 
-<<<<<<< HEAD
 The Rastrigin's (cost) function is included.
 
 Karagiannis, G., Konomi, B., Lin, G., & Liang F. (under revision). 
@@ -150,12 +145,4 @@ FUTURE UPDATES :
 
 
          
-         
-=======
-The Rastrigin's (cost) function is included. 
-
-Karagiannis, G., Konomi, B. A., Lin, G., & Liang, F. (2015). 
-Parallel and Interacting Stochastic Approximation Annealing algorithms for global optimisation. 
-arXiv preprint arXiv:1508.04876.
-
->>>>>>> a5e54d3fe266647f7c2a933a5558084fe8cfd1b7
+  
