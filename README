@@ -1,10 +1,11 @@
 DESCRIPTION :
 -------------
 
-This software performs stochastic optimisation on deterministic functions. 
-
-A C code implementation of PISAA for minimising any R-valued cost function 
+This is a C code implementation of PISAA for minimising any R-valued cost function 
 of a R^n-valued variable.
+
+PISAA is a stochastic optimisation algorithm that aims at overcoming the 
+local trapping issue.
 
 The Rastrigin's (cost) function is included.
 
