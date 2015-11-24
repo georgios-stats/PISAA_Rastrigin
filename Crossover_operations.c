@@ -1,6 +1,4 @@
 /*
- * Georgios Karagiannis © 2014  
- *
  * Georgios Karagiannis 
  * Postdoctoral research associate
  * Department of Mathematics, Purdue University
@@ -12,6 +10,8 @@
  * Email: gkaragia@purdue.edu
  *
  * Contact email: georgios.stats@gmail.com
+ *
+ * Georgios Karagiannis © 2014  
 */
 
 #include <math.h>
