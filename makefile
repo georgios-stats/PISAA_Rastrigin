@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Copyright 2014 Georgios Karagiannis
-#
 # Georgios Karagiannis
 #
 # Postdoctoral research associate
@@ -14,6 +12,8 @@
 # Email: gkaragia@purdue.edu
 #
 # Contact email: georgios.stats@gmail.com
+#
+# Georgios Karagiannis © 2014
 
 CC=icc
 CFLAGS=-O2
