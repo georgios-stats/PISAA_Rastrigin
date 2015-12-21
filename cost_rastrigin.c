@@ -122,15 +122,6 @@ double cost(double *y, int N_dimension){
 			for (j =1;j<= N_dimension;j++)
 				z[i] += data[i][j]*y[j] ;
 	}
-
-/*	for (i=1;i<=N_dimension;i++) {
-		for (j=1;j<=N_dimension;j++)
-			printf("%f ",data[i][j]) ;
-			printf("\n") ;
-	}
-	printf("%d\n",dataQ) ;*/
-
-
 #else
 	z = y-1 ;
 #endif
