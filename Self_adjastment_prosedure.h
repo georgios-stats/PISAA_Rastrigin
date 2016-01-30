@@ -17,7 +17,7 @@
 */
 
 /*
- * Georgios Karagiannis 
+ * Georgios Karagiannis
  * Postdoctoral research associate
  * Department of Mathematics, Purdue University
  * 150 N. University Street
@@ -31,39 +31,20 @@
 */
 
 
-#include <math.h>
-#include "nrutil.h"
+void self_adj_grid_points( double *, int , double , double ) ;
 
-#include "RNG.h"
-#include "cost_rastrigin.h"
-#include "HitAndRun_update.h"
+void self_adj_index_search(int *, double , double *, int  ) ;
 
-void MH_HitAndRun( double *z, double *fz,
-					int N_dimension, double temp,
-					double scl, double *accpr_pop, double *z_new )
-{
+void self_adj_desired_freq(double *, int , double ) ;
 
-	int i ;
-	double accpr ;
-	double fy ;
-	double r ;
-	double un ;
+void self_adj_theta_update(double *, int , double *, double *, int ,
+						double *, double , double *) ;
 
-	uniformdirectionrng( z_new , N_dimension ) ;
-    for(i=1; i<=N_dimension; i++)
-    	z_new[i] = z[i] + z_new[i]*scl*normalrng() ;
+void self_adj_theta_norm(double *, double *, double *, int , double ) ;
 
-	fy = cost(z_new, N_dimension) ;
 
-	r = (*fz-fy) / temp ;
-	accpr = ( r>0.0 ? 1.0 : exp(r) ) ;
-	un = uniformrng() ;
-	if(accpr>un)
-	{
-		*fz = fy;
-		for(i=1 ; i<=N_dimension ; i++) z[i] = z_new[i] ;
-	}
 
-	*accpr_pop = accpr ;
 
-}
+
+
+

@@ -17,7 +17,7 @@
 */
 
 /*
- * Georgios Karagiannis 
+ * Georgios Karagiannis
  * Postdoctoral research associate
  * Department of Mathematics, Purdue University
  * 150 N. University Street
@@ -30,40 +30,23 @@
  * Contact email: georgios.stats@gmail.com
 */
 
+void setseedrng(unsigned long) ;
 
-#include <math.h>
-#include "nrutil.h"
+double uniformrng(void) ;
 
-#include "RNG.h"
-#include "cost_rastrigin.h"
-#include "HitAndRun_update.h"
+int integerrng(int, int) ;
 
-void MH_HitAndRun( double *z, double *fz,
-					int N_dimension, double temp,
-					double scl, double *accpr_pop, double *z_new )
-{
+double normalrng(void) ;
 
-	int i ;
-	double accpr ;
-	double fy ;
-	double r ;
-	double un ;
+double normalrng_polar(void) ;
 
-	uniformdirectionrng( z_new , N_dimension ) ;
-    for(i=1; i<=N_dimension; i++)
-    	z_new[i] = z[i] + z_new[i]*scl*normalrng() ;
+double normalrng_ratio(void) ;
 
-	fy = cost(z_new, N_dimension) ;
+void uniformdirectionrng(double *, int ) ;
 
-	r = (*fz-fy) / temp ;
-	accpr = ( r>0.0 ? 1.0 : exp(r) ) ;
-	un = uniformrng() ;
-	if(accpr>un)
-	{
-		*fz = fy;
-		for(i=1 ; i<=N_dimension ; i++) z[i] = z_new[i] ;
-	}
+void CreateRotationMatrix(double **, int ) ;
 
-	*accpr_pop = accpr ;
 
-}
+
+
+

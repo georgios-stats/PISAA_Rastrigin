@@ -30,19 +30,13 @@
  * Contact email: georgios.stats@gmail.com
 */
 
-
 #include <math.h>
 #include "nrutil.h"
 
-double uniformrng( void ) ;
-
-int integerrng(int, int) ;
-
-double normalrng( void ) ;
-
-double cost(double*,int) ;
-
-void self_adj_index_search(int*,double,double*,int) ;
+#include "RNG.h"
+#include "cost_rastrigin.h"
+#include "Self_adjastment_prosedure.h"
+#include "Crossover_operations.h"
 
 void CO_select_forward_0(double *prob, int *n1, int *n2, int N_population){
 

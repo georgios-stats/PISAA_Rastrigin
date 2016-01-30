@@ -43,10 +43,11 @@
 
 #include <math.h>
 #include "nrutil.h"
-double uniformrng(void);
+
+#include "RNG.h"
 
 /* MATRIX MULTIPLICATION: C(N,M)=A(N,P)*B(P,M) */
-void MulMatrix( double **A, double **B, double **C, int n, int p, int m){
+static void MulMatrix( double **A, double **B, double **C, int n, int p, int m){
 
 	int i ;
 	int j ;
@@ -60,7 +61,7 @@ void MulMatrix( double **A, double **B, double **C, int n, int p, int m){
 
 }
 
-void MRot( double **MTurn, int i, int j, int N, double alpha){
+static void MRot( double **MTurn, int i, int j, int N, double alpha){
 
 	int k1 ;
 	int k2 ;

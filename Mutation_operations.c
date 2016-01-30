@@ -34,17 +34,10 @@
 #include <math.h>
 #include "nrutil.h"
 
-double uniformrng( void ) ;
-
-double normalrng( void ) ;
-
-int integerrng( int, int ) ;
-
-void uniformdirectionrng(double *, int) ;
-
-double cost(double*,int) ;
-
-void self_adj_index_search(int*,double,double*,int) ;
+#include "RNG.h"
+#include "cost_rastrigin.h"
+#include "Self_adjastment_prosedure.h"
+#include "Mutation_operations.h"
 
 void Mutation_HitAndRun(double *z, double *fz,
 				int N_dimension,

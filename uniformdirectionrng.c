@@ -33,7 +33,7 @@
 
 #include <math.h>
 
-double normalrng(void) ;
+#include "RNG.h"
 
 void uniformdirectionrng(double *x, int n)
 {

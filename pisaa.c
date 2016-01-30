@@ -38,46 +38,12 @@
 #include <time.h>
 #include "nrutil.h"
 
-void setseedrng(unsigned long) ;
-double uniformrng(void) ;
-int integerrng(int,int) ;
-
-void get_data(int) ;
-void cost_bounds(double*,double*,int) ;
-double cost(double*,int) ;
-
-void self_adj_grid_points(double*,int,double,double) ;
-void self_adj_desired_freq(double*,int,double) ;
-void self_adj_theta_update(double*,int,double*,double*,int,double*,double,double*) ;
-void self_adj_theta_norm(double*,double*,double*,int,double) ;
-
-void MH_HitAndRun(double*,double*,int,double,double,double*,double*);
-
-void Mutation_HitAndRun(double*,double*,
-						int,
-						double*,double*,int,double,double,double*,
-						double*) ;
-void Mutation_Metropolis(double*,double*,
-						int,
-						double*,double*,int,double,double,double*,
-						double*) ;
-void Mutation_Kpoint(double*,double*,
-						int,
-						double*,double*,int,double,double,double*,
-						double*) ;
-
-void Crossover_snooker(double**,double*,
-						int,int,
-						double*,double*,int,double,double,double*,
-						double*) ;
-void Crossover_linear(double**,double*,
-						int,int,
-						double*,double*,int,double,double,double*,
-						double*) ;
-void Crossover_Kpoint(double**,double*,
-						int,int,
-						double*,double*,int,double,double*,
-						double*,double*) ;
+#include "RNG.h"
+#include "cost_rastrigin.h"
+#include "Self_adjastment_prosedure.h"
+#include "HitAndRun_update.h"
+#include "Mutation_operations.h"
+#include "Crossover_operations.h"
 
 void flags_usage(void) {
 	printf("Usage :\n") ;

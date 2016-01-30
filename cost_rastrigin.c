@@ -35,6 +35,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "nrutil.h"
+#include "cost_rastrigin.h"
 
 #ifndef INFINITY
 	#include <float.h>
@@ -46,10 +47,8 @@
 #endif
 
 #if __ROTATE__
-	void CreateRotationMatrix(double**,int) ;
-
+	#include "RNG.h"
 	static double **data=NULL ;
-
 #endif
 
 /*
@@ -137,4 +136,6 @@ double cost(double *y, int N_dimension){
 	return ff ;
 
 }
+
+
 
