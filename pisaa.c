@@ -323,10 +323,10 @@ int main(int argc, char *argv[]){
 			scl_refine = atof(argv[++i]) ;
 		else if (strcmp("-flags", argv[i]) == 0)			/*.. HELP*/
 			flags_usage() ;
-   }
+	}
 
 	/*PRINT INPUTS OF THE ALGORITHM*/
-    printf( "\n PRINT INPUTS OF THE ALGORITHM \n") ;
+	printf( "\n PRINT INPUTS OF THE ALGORITHM \n") ;
 
 	printf( "ID: \t\t %d \n", ID) ;
 
@@ -377,17 +377,17 @@ int main(int argc, char *argv[]){
 
 	snprintf(file_name, sizeof file_name, "./output_files/hist-d=%d-n=%d-r=%d",
 			N_dimension, N_population, ID);
-    ins_hist = fopen( file_name , "w" ) ;
+	ins_hist = fopen( file_name , "w" ) ;
 
-    if ( N_sample>0 ) {
-    snprintf(file_name, sizeof file_name, "./output_files/fz_best_trace-d=%d-n=%d-r=%d",
-			N_dimension, N_population, ID);
-    ins_fz_best_trace = fopen( file_name , "w" ) ;
-    }
+	if ( N_sample>0 ) {
+		snprintf(file_name, sizeof file_name, "./output_files/fz_best_trace-d=%d-n=%d-r=%d",
+				N_dimension, N_population, ID);
+		ins_fz_best_trace = fopen( file_name , "w" ) ;
+	}
 
-    snprintf(file_name, sizeof file_name, "./output_files/fz_best-d=%d-n=%d-r=%d",
+	snprintf(file_name, sizeof file_name, "./output_files/fz_best-d=%d-n=%d-r=%d",
 			N_dimension, N_population, ID);
-    ins_fz_best = fopen( file_name , "w" ) ;
+	ins_fz_best = fopen( file_name , "w" ) ;
 
 
 	/* ALLOCATE SPACE FOR THE ARRAYS -------------------------------------- */
@@ -534,8 +534,7 @@ int main(int argc, char *argv[]){
 		else
 			lab_mcmc = integerrng( 1 , 3) ;
 
-		switch ( lab_mcmc )
-		{
+		switch ( lab_mcmc ) {
 		case 0 :
 			/*sample*/
 			sumv = 0.0 ;
